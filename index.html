@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173d40">
+<title>Find the Location · Ordered pairs</title>
+<style>
+:root{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#18383b;background:#edf2ee;font-synthesis:none;--teal:#145b59;--muted:#536b6c;--line:#d5e1dc}
+*{box-sizing:border-box}body{margin:0;padding:28px 16px;min-height:100vh;min-height:100dvh;display:grid;place-items:center}button{font:inherit;cursor:pointer;touch-action:manipulation;border:0}button:disabled{cursor:default;opacity:.45}button:focus-visible,summary:focus-visible,svg:focus-visible{outline:3px solid #ac4c17;outline-offset:4px}button{min-height:48px;border-radius:12px;font-weight:650}button:hover:not(:disabled){filter:brightness(.94)}.widget{width:100%;max-width:990px;background:#fff;border:1px solid #d6e0da;border-radius:26px;box-shadow:0 18px 60px #1d393510;overflow:hidden}.top{padding:26px 30px 19px;border-bottom:1px solid var(--line)}.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:800;color:var(--teal);margin:0 0 9px}.heading{display:flex;gap:12px;justify-content:space-between;align-items:center}h1{font-size:clamp(26px,4vw,36px);letter-spacing:-.045em;margin:0;line-height:1.15}.tag{font-size:12px;border:1px solid var(--line);padding:8px 12px;border-radius:30px;white-space:nowrap}.intro{color:var(--muted);margin:10px 0 0;line-height:1.5;font-size:15px}.layout{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(285px,1fr);gap:26px;padding:24px 30px 26px}.graph-area{min-width:0}.graph-shell{background:#f8fbf9;border:1px solid var(--line);border-radius:18px;padding:9px}svg{display:block;width:100%;height:auto;aspect-ratio:1;touch-action:pan-y;user-select:none;-webkit-user-select:none;border-radius:10px}svg text{font-family:inherit}.graph-caption{text-align:center;font-size:12px;color:var(--muted);line-height:1.5;margin:10px 0 0}.side{display:flex;flex-direction:column;justify-content:center;min-width:0}.progress-label{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted);font-weight:650}.progress{height:5px;background:#e8efeb;border-radius:4px;margin:9px 0 22px;overflow:hidden}.fill{height:100%;background:var(--teal);width:0;transition:width .2s}h2{font-size:21px;line-height:1.35;letter-spacing:-.025em;margin:0 0 10px}.target{font-size:40px;font-weight:750;letter-spacing:-.04em;color:var(--teal);margin:4px 0 10px;font-variant-numeric:tabular-nums}.instruction{color:var(--muted);font-size:14px;line-height:1.55;margin:0 0 17px}.coordinates{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 17px}.coordinate{flex:1;min-width:140px;border:1px solid var(--line);border-radius:14px;padding:9px;background:#fafcfb}.coordinate-label{display:block;font-size:12px;font-weight:700;text-align:center;margin:0 0 5px;color:var(--muted)}.stepper{display:flex;justify-content:space-between;align-items:center;gap:3px}.stepper button{width:44px;min-height:44px;background:#e6eeea;color:#184d4c;font-size:22px}.stepper output{font-size:23px;font-weight:750;min-width:26px;text-align:center;font-variant-numeric:tabular-nums}.actions{display:flex;gap:10px}.primary{background:var(--teal);color:white;padding:12px 18px;flex:1}.secondary{background:#edf2ef;color:#254d4d;padding:12px 17px}.feedback{margin:14px 0 0;padding:12px 14px;min-height:66px;background:#f2f6f3;border-radius:12px;font-size:14px;line-height:1.5}.feedback.success{background:#e4f3ea;color:#174b36}.feedback.retry{background:#fff1e2;color:#743b14}.hint{font-size:13px;line-height:1.55;color:#735020;background:#fff6e6;border-radius:12px;padding:11px 13px;margin:10px 0 0}.footer{border-top:1px solid var(--line);padding:16px 30px;display:flex;gap:18px;align-items:flex-start;justify-content:space-between;background:#fafcfb}details{flex:1;max-width:710px;font-size:13px;line-height:1.6}summary{font-weight:700;cursor:pointer;min-height:30px}details p{margin:7px 0}.restart{font-size:12px;background:transparent;color:var(--muted);padding:0 7px;min-height:36px;white-space:nowrap}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.summary-stats{padding:14px 16px;background:#eef5f0;border-radius:14px;line-height:1.8;font-size:14px;margin-bottom:18px}.small{font-size:12px;color:var(--muted);line-height:1.6}[hidden]{display:none!important}
+@media(max-width:690px){body{padding:12px 10px}.widget{border-radius:20px}.top{padding:20px 19px 16px}.layout{grid-template-columns:1fr;gap:18px;padding:18px 19px}.graph-area{max-width:430px;width:100%;margin:auto}.side{justify-content:flex-start}.progress{margin-bottom:14px}.target{font-size:32px}.heading{align-items:flex-start}.tag{display:none}.footer{padding:14px 19px;gap:8px}.feedback{min-height:0}.coordinates{margin-bottom:12px}.instruction{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="widget" aria-labelledby="title">
+ <header class="top"><p class="eyebrow">Coordinate lab · Linear functions</p><div class="heading"><h1 id="title">Find the Location</h1><span class="tag">Ordered pairs</span></div><p class="intro">Every point has an address. Go across first, then up or down.</p></header>
+ <div class="layout">
+  <section class="graph-area" aria-label="Coordinate plane">
+   <div class="graph-shell"><svg id="grid" viewBox="0 0 440 440" role="img" aria-labelledby="gridTitle gridDesc" tabindex="0"><title id="gridTitle">Interactive coordinate plane</title><desc id="gridDesc">Both axes run from negative five to five. Tap near a grid intersection to choose a point. Or use the coordinate controls beside the graph. With the graph focused, use arrow keys to move and Enter to check.</desc><g id="drawing"></g></svg></div>
+   <p class="graph-caption" id="caption">Tap a grid intersection, or use the coordinate controls.</p>
+  </section>
+  <section class="side" aria-label="Practice">
+   <div class="progress-label"><span id="round">Question 1 of 10</span><span id="stage">Across, then up</span></div><div class="progress" role="progressbar" aria-label="Questions completed" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><div class="fill" id="fill"></div></div>
+   <div id="exercise"><h2 id="prompt">Find this point</h2><p class="target" id="target">(3, 2)</p><p class="instruction" id="instruction">Start at (0, 0). Choose the point, then check your answer.</p>
+    <div class="coordinates" role="group" aria-label="Your selected coordinates">
+     <div class="coordinate"><span class="coordinate-label" id="xlabel">x · horizontal</span><div class="stepper"><button type="button" data-axis="x" data-change="-1" aria-label="Decrease x">−</button><output id="xvalue" aria-labelledby="xlabel">0</output><button type="button" data-axis="x" data-change="1" aria-label="Increase x">+</button></div></div>
+     <div class="coordinate"><span class="coordinate-label" id="ylabel">y · vertical</span><div class="stepper"><button type="button" data-axis="y" data-change="-1" aria-label="Decrease y">−</button><output id="yvalue" aria-labelledby="ylabel">0</output><button type="button" data-axis="y" data-change="1" aria-label="Increase y">+</button></div></div>
+    </div>
+    <div class="actions"><button class="secondary" id="hintButton" type="button">Hint</button><button class="primary" id="check" type="button">Check point</button><button class="primary" id="next" type="button" hidden>Next point →</button></div>
+    <div id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true">Your selected point is (0, 0). Ready when you are.</div><p id="hint" class="hint" hidden></p>
+   </div>
+   <div id="complete" hidden><h2 tabindex="-1" id="completeTitle">You found your way.</h2><p class="instruction">An ordered pair is (x, y): horizontal position first, vertical position second.</p><div class="summary-stats" id="stats"></div><p class="instruction"><strong>Talk it through:</strong> Why do (3, 2) and (2, 3) name different points?</p><button class="primary" id="again" type="button">Practice again</button><p class="small">Show this summary to your teacher. Results are only on this page and reset when you restart or reload.</p></div>
+  </section>
+ </div>
+ <footer class="footer"><details><summary>How ordered pairs work</summary><p><strong>(x, y)</strong> gives a point’s location. Start at the <strong>origin, (0, 0)</strong>. For x, positive means right and negative means left. For y, positive means up and negative means down. A zero means no movement in that direction.</p><p>Example: <strong>(−3, 2)</strong> means 3 left, then 2 up. Order matters! On a keyboard, focus the graph and use arrow keys; press Enter to check. You can also use the labeled + and − buttons.</p></details><button class="restart" id="restart" type="button">Start over</button></footer>
+</main>
+<noscript><p>This activity needs JavaScript enabled to respond to your answers.</p></noscript>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const questions=[{x:3,y:2,stage:'Across, then up'},{x:2,y:3,stage:'Order matters'},{x:-3,y:2,stage:'Try a negative x'},{x:-2,y:-4,stage:'Left and down'},{x:4,y:-1,stage:'Right and down'},{x:0,y:3,stage:'On an axis'},{x:-4,y:0,stage:'On an axis'},{x:4,y:-2,read:true,stage:'Read the point'},{x:-1,y:4,read:true,stage:'Read the point'},{x:0,y:-3,read:true,stage:'Read the point'}];
+let index=0,x=0,y=0,solved=false,attempts=0,firstTry=0,hints=0,usedHint=false;
+const ns='http://www.w3.org/2000/svg';
+function shape(tag,attrs,text){const el=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));if(text!==undefined)el.textContent=text;$('drawing').appendChild(el);return el;}
+const px=n=>220+n*32,py=n=>220-n*32;
+function draw(){
+ $('drawing').replaceChildren();
+ for(let n=-5;n<=5;n++){
+  shape('line',{x1:px(n),y1:60,x2:px(n),y2:380,stroke:n===0?'#527370':'#dbe6df','stroke-width':n===0?2:1});
+  shape('line',{x1:60,y1:py(n),x2:380,y2:py(n),stroke:n===0?'#527370':'#dbe6df','stroke-width':n===0?2:1});
+  if(n!==0){shape('text',{x:px(n),y:240,'text-anchor':'middle','font-size':12,fill:'#49635f'},n);shape('text',{x:204,y:py(n)+4,'text-anchor':'end','font-size':12,fill:'#49635f'},n);}
+ }
+ shape('text',{x:207,y:239,'font-size':12,fill:'#49635f'},'0');
+ shape('text',{x:403,y:225,'font-size':17,'font-weight':700,fill:'#245955'},'x');
+ shape('text',{x:215,y:35,'font-size':17,'font-weight':700,fill:'#245955'},'y');
+ const q=questions[index];
+ if(q.read){shape('circle',{cx:px(q.x),cy:py(q.y),r:9,fill:'#ab491e',stroke:'white','stroke-width':3});shape('text',{x:px(q.x)+14,y:py(q.y)-12,'font-size':16,'font-weight':750,fill:'#8d3d19'},'P');}
+ else{
+  if(!$('hint').hidden||solved){shape('polyline',{points:`220,220 ${px(x)},220 ${px(x)},${py(y)}`,fill:'none',stroke:'#247b72','stroke-width':3,'stroke-dasharray':'5 5'});}
+  shape('circle',{cx:px(x),cy:py(y),r:11,fill:'#145b59',stroke:'white','stroke-width':3});
+  shape('circle',{cx:px(x),cy:py(y),r:3,fill:'white'});
+ }
+ $('gridTitle').textContent=q.read?'Coordinate plane with point P':'Coordinate plane with your selected point';
+}
+function pair(a,b){return `(${a}, ${b})`;}
+function feedback(text,kind=''){$('feedback').textContent=text;$('feedback').className='feedback '+kind;}
+function update(announce=true){$('xvalue').value=x;$('yvalue').value=y;document.querySelectorAll('[data-axis]').forEach(b=>{const v=b.dataset.axis==='x'?x:y;b.disabled=solved||(v===-5&&b.dataset.change==='-1')||(v===5&&b.dataset.change==='1');});draw();if(announce)feedback(`Your ${questions[index].read?'answer':'selected point'} is ${pair(x,y)}. Choose Check ${questions[index].read?'answer':'point'} when ready.`);}
+function choose(a,b){if(solved||index>=questions.length)return;x=Math.max(-5,Math.min(5,a));y=Math.max(-5,Math.min(5,b));update();}
+function load(){x=0;y=0;solved=false;attempts=0;usedHint=false;const q=questions[index];$('round').textContent=`Question ${index+1} of ${questions.length}`;$('stage').textContent=q.stage;$('fill').style.width=`${index/10*100}%`;document.querySelector('[role="progressbar"]').setAttribute('aria-valuenow',index);$('prompt').textContent=q.read?'What is the address of point P?':'Find this point';$('target').textContent=q.read?'(x, y) = ?':pair(q.x,q.y);$('instruction').textContent=q.read?'Read the marked point. Use the controls to enter its x- and y-coordinates.':'Start at (0, 0). Choose the point, then check your answer.';$('caption').textContent=q.read?'Point P is marked on the grid. Enter its coordinates.':'Tap a grid intersection, or use the coordinate controls.';$('hint').hidden=true;$('hintButton').disabled=false;$('check').hidden=false;$('check').textContent=q.read?'Check answer':'Check point';$('next').hidden=true;update(false);feedback(q.read?'Read x first, then y. Enter the coordinates below.':'Your selected point is (0, 0). Ready when you are.');}
+document.querySelectorAll('[data-axis]').forEach(b=>b.addEventListener('click',()=>{const delta=Number(b.dataset.change);choose(x+(b.dataset.axis==='x'?delta:0),y+(b.dataset.axis==='y'?delta:0));}));
+let pointerStart=null;
+$('grid').addEventListener('pointerdown',e=>{pointerStart={x:e.clientX,y:e.clientY,id:e.pointerId};});
+$('grid').addEventListener('pointercancel',()=>{pointerStart=null;});
+$('grid').addEventListener('pointerup',e=>{if(!pointerStart||pointerStart.id!==e.pointerId)return;const moved=Math.hypot(e.clientX-pointerStart.x,e.clientY-pointerStart.y);pointerStart=null;if(moved>12||solved||$('exercise').hidden||questions[index].read)return;const r=$('grid').getBoundingClientRect();const sx=(e.clientX-r.left)*440/r.width,sy=(e.clientY-r.top)*440/r.height;if(sx<44||sx>396||sy<44||sy>396)return;choose(Math.round((sx-220)/32),Math.round((220-sy)/32));});
+$('grid').addEventListener('keydown',e=>{if($('exercise').hidden||solved)return;const moves={ArrowRight:[1,0],ArrowLeft:[-1,0],ArrowUp:[0,1],ArrowDown:[0,-1]};if(moves[e.key]){e.preventDefault();choose(x+moves[e.key][0],y+moves[e.key][1]);}else if(e.key==='Enter'){e.preventDefault();$('check').click();}});
+$('hintButton').addEventListener('click',()=>{if(!usedHint){hints++;usedHint=true;}const q=questions[index];$('hint').hidden=false;$('hint').textContent=q.read?'Find the horizontal position of P first: left of the origin is negative, right is positive. Then read its vertical position: below is negative, above is positive. On an axis, one coordinate is zero.':`From the origin: ${q.x===0?'stay at x = 0':`go ${Math.abs(q.x)} ${q.x<0?'left':'right'}`}, then ${q.y===0?'stay at y = 0':`go ${Math.abs(q.y)} ${q.y<0?'down':'up'}`}. The dotted path shows your current selection.`;feedback('Hint opened. '+$('hint').textContent);draw();});
+$('check').addEventListener('click',()=>{if(solved)return;attempts++;const q=questions[index];if(x===q.x&&y===q.y){solved=true;if(attempts===1)firstTry++;feedback(`Correct! ${pair(q.x,q.y)} means x = ${q.x} and y = ${q.y}. ${q.x===0?'This point is on the y-axis.':q.y===0?'This point is on the x-axis.':'Horizontal position first, vertical position second.'}`,'success');$('check').hidden=true;$('next').hidden=false;$('next').textContent=index===9?'See my summary →':'Next point →';$('hintButton').disabled=true;update(false);$('next').focus();}else{let message=x===q.y&&y===q.x?'The coordinates look reversed. Read x (horizontal) first, then y (vertical).':x!==q.x&&y===q.y?'Your vertical position is correct. Check the horizontal position.':x===q.x?'Your horizontal position is correct. Check the vertical position.':'Check both positions. Start at the origin: horizontal first, then vertical.';feedback(message+' Try again, or open a hint.','retry');}});
+$('next').addEventListener('click',()=>{index++;if(index===questions.length){$('exercise').hidden=true;$('complete').hidden=false;$('round').textContent='10 of 10 complete';$('stage').textContent='Practice complete';$('fill').style.width='100%';document.querySelector('[role="progressbar"]').setAttribute('aria-valuenow',10);$('stats').textContent=`Points completed: 10 of 10. Correct on first check: ${firstTry} of 10. Questions with a hint: ${hints}.`;$('completeTitle').focus();}else{load();$('prompt').setAttribute('tabindex','-1');$('prompt').focus();}});
+function restart(){index=0;firstTry=0;hints=0;$('exercise').hidden=false;$('complete').hidden=true;load();$('prompt').setAttribute('tabindex','-1');$('prompt').focus();}
+$('restart').addEventListener('click',restart);$('again').addEventListener('click',restart);load();
+</script>
+</body>
+</html>
